@@ -1,0 +1,11 @@
+
+
+<%= form_for(@article, url: (@article.new_record? ? admin_articles_url : admin_article_url(@article))) do |f| %>
+
+  Headline: <%= f.text_field :headline %><br>
+  Header: <%= f.text_field :header %><br>
+  Body: <%= f.text_field :body %><br>
+
+  <%= f.submit "save" %>
+
+<% end %>

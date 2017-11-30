@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   namespace :admin do
+    #TODO rename signup and login to something absurd
     get '/signup' => 'users#new'
     post '/users' => 'users#create'
     get '/login' => 'sessions#new'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
     get '/logout' => 'sessions#destroy'
 
     resources :dashboard
+
+    resources :articles
 
   end
 
